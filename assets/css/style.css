@@ -1,0 +1,17 @@
+body {
+   background: orange;
+}
+header {
+   text-align: center;
+   color: rgba(245, 245, 245, 0.808);
+}
+h1 {
+   font-family: 'Lobster', cursive;
+   font-size: 10vw;
+}
+h3 {
+   font-size: 3.5vw;
+}
+header img {
+   margin: 20px 10px;
+}
