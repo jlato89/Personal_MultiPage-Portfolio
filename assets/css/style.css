@@ -28,6 +28,7 @@ body {
 }
 .btn {
    display: inline-block;
+   width: 6rem;
    text-decoration: none;
    color: #333;
    border: 1px #ccc solid;
