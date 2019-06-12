@@ -9,10 +9,10 @@ body {
    font-family: 'Bree Serif', serif;
 }
 #bg-img {
-   background: url(https://theholyroast.com/wp-content/uploads/2016/11/coffee-laptop-background.jpg);
-   /* background: url(https://images.unsplash.com/photo-1544536818-9c887710d97a); */
+   background: url(../images/bg.jpg); /* ref: https://theholyroast.com/wp-content/uploads/2016/11/coffee-laptop-background.jpg */
+   background-color: #d2d2d2;
    background-size: cover;
-   background-repeat: no-repeat; 
+   background-repeat: no-repeat;
 }
    #bg-img:after {
       content: '';
@@ -74,3 +74,14 @@ main {
          color: orange;
          transition: all 0.5s ease-out;
       }
+
+/* Media Queries */
+@media only screen and (max-width: 850px) {
+   #bg-img {
+      background: url(../images/bg.jpg);
+      background-color: #d2d2d2;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      }
+}
