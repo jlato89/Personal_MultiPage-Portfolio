@@ -5,10 +5,8 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  -webkit-transition: ease;
-  transition: ease;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #menu-btn .btn-line {
@@ -16,10 +14,8 @@
   height: 3px;
   margin: 0 0 5px 0;
   background: #fff;
-  -webkit-transition: ease;
-  transition: ease;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #menu-btn.close {
@@ -80,10 +76,8 @@
   list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
-  -webkit-transition: ease;
-  transition: ease;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #menu-nav.show {
@@ -95,10 +89,8 @@
   background: #444;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
-  -webkit-transition: ease;
-  transition: ease;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #menu-portrait.show {
@@ -117,10 +109,8 @@
 #menu .nav-item {
   -webkit-transform: translate3d(600px, 0, 0);
           transform: translate3d(600px, 0, 0);
-  -webkit-transition: ease;
-  transition: ease;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #menu .nav-item.show {
@@ -141,10 +131,8 @@
   font-weight: 300;
   color: #fff;
   text-decoration: none;
-  -webkit-transition: ease;
-  transition: ease;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #menu .nav-link:hover {
