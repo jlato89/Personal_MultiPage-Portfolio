@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import 'config';
 @import 'menu';
+@import 'mobile';
 
 
 //*   GLOBALS
@@ -96,15 +98,3 @@ main {
       }
    }
 }
-
-
-//*   MEDIA QUERIES
-// @media only screen and (max-width: 850px) {
-//    #bg-img {
-//       background: url(../images/bg.jpg);
-//       background-color: #d2d2d2;
-//       background-size: 100%;
-//       background-repeat: no-repeat;
-//       background-position: center;
-//       }
-// }
