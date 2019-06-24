@@ -218,6 +218,10 @@ header {
   width: 100%;
 }
 
+.text-secondary {
+  color: #eece1a;
+}
+
 main {
   min-height: calc(100vh - 50px);
   padding: 4rem;
@@ -228,15 +232,15 @@ main#home {
   margin-top: 20vh;
 }
 
-main#home .home-lg-heading {
+main#home .lg-heading {
   font-size: 6rem;
 }
 
-main#home .home-lg-heading .home-alt-color {
+main#home .lg-heading .alt-color {
   color: #eece1a;
 }
 
-main#home .home-sm-heading {
+main#home .sm-heading {
   background: rgba(73, 73, 73, 0.5);
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -259,6 +263,51 @@ main #icons a:hover {
   transition: all 0.5s ease-out;
 }
 
+#about-section {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+      grid-template-areas: 'bio-img bio bio' 'job1 job2 job3';
+  -ms-grid-columns: (1f)[3];
+      grid-template-columns: repeat(3, 1f);
+}
+
+#about-section #bio-img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: bio-img;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid #eece1a;
+  margin: auto;
+}
+
+#about-section #bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bio;
+}
+
+#about-section #job1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: job1;
+}
+
+#about-section #job2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: job2;
+}
+
+#about-section #job3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: job3;
+}
+
 @media screen and (max-width: 768px) {
   main {
     -webkit-box-align: center;
@@ -266,7 +315,7 @@ main #icons a:hover {
             align-items: center;
     text-align: center;
   }
-  main .home-lg-heading {
+  main .lg-heading {
     line-height: 1;
     margin: 0 -4rem;
     margin-bottom: 1rem;
