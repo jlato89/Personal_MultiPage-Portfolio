@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
 @import 'config';
 @import 'menu';
-@import 'mobile';
 
 
 //*   GLOBALS
@@ -10,8 +9,9 @@
 }
 
 body {
-   background: #444;
-   color: #fff;
+   @include background;
+   background: $primary-color;
+   color: set-text-color($primary-color);
    height: 100%;
    margin: 0;
    font-family: 'Bree Serif', serif;
@@ -28,22 +28,8 @@ h3 {
 
 //   BACKGROUND & OVERLAY
 #bg-img {
-   background: url(../images/bg.jpg); // ref: https://theholyroast.com/wp-content/uploads/2016/11/coffee-laptop-background.jpg
+   background: url($home-image); // ref: https://theholyroast.com/wp-content/uploads/2016/11/coffee-laptop-background.jpg
    background-color: #d2d2d2;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: top right;
-
-      &:after {
-      content: '';
-      background: rgba(68, 68, 68, 0.6);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 0;
-      z-index: -1;
-   }
 }
 
 //   LINKS
@@ -62,7 +48,7 @@ header {
 
 //*   MAIN CONTENT
 main {
-   height: 100%;
+   min-height: calc(100vh - 50px); // Workaround for sticky footer
    padding: 4rem;
 
    &#home {
@@ -73,7 +59,7 @@ main {
          font-size: 6rem;
 
          .home-alt-color {
-            color: orange;
+            color: $secondary-color;
          }
       }
       .home-sm-heading {
@@ -92,9 +78,11 @@ main {
          padding: 0.4rem;
 
          &:hover {
-            color: orange;
+            color: $secondary-color;
             transition: all 0.5s ease-out;
          }
       }
    }
 }
+
+@import 'mobile';
