@@ -5,8 +5,8 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #menu-btn .btn-line {
@@ -14,8 +14,8 @@
   height: 3px;
   margin: 0 0 5px 0;
   background: #fff;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #menu-btn.close {
@@ -71,13 +71,13 @@
 
 #menu-nav {
   background: #373737;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #menu-nav.show {
@@ -89,8 +89,8 @@
   background: #444;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #menu-portrait.show {
@@ -102,7 +102,7 @@
   background: url(../images/portrait.jpg);
   background-size: 101%;
   background-repeat: no-repeat;
-  border: 3px solid orange;
+  border: 3px solid #444;
   border-radius: 50%;
   width: 250px;
   height: 250px;
@@ -111,8 +111,8 @@
 #menu .nav-item {
   -webkit-transform: translate3d(600px, 0, 0);
           transform: translate3d(600px, 0, 0);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #menu .nav-item.show {
@@ -133,12 +133,12 @@
   font-weight: 300;
   color: #fff;
   text-decoration: none;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #menu .nav-link:hover {
-  color: orange;
+  color: #eece1a;
 }
 
 .nav-item:nth-child(1) {
@@ -201,6 +201,23 @@ h3 {
   font-weight: 400;
 }
 
+h1.lg-heading,
+h2.lg-heading,
+h3.lg-heading {
+  font-size: 6rem;
+}
+
+h1.sm-heading,
+h2.sm-heading,
+h3.sm-heading {
+  background: rgba(73, 73, 73, 0.5);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2rem 1rem;
+  margin-bottom: 2rem;
+}
+
 #bg-img {
   background: url(url(../images/bg.jpg));
   background-color: #d2d2d2;
@@ -229,24 +246,10 @@ main {
 
 main#home {
   overflow: hidden;
+}
+
+main#home h1 {
   margin-top: 20vh;
-}
-
-main#home .lg-heading {
-  font-size: 6rem;
-}
-
-main#home .lg-heading .alt-color {
-  color: #eece1a;
-}
-
-main#home .sm-heading {
-  background: rgba(73, 73, 73, 0.5);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.2rem 1rem;
-  margin-bottom: 2rem;
 }
 
 main #icons {
@@ -255,12 +258,12 @@ main #icons {
 
 main #icons a {
   padding: 0.4rem;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 main #icons a:hover {
   color: #eece1a;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
 }
 
 #about-section {
@@ -268,8 +271,8 @@ main #icons a:hover {
   display: grid;
   grid-gap: 30px;
       grid-template-areas: 'bio-img bio bio' 'job1 job2 job3';
-  -ms-grid-columns: (1f)[3];
-      grid-template-columns: repeat(3, 1f);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 #about-section #bio-img {
@@ -288,6 +291,12 @@ main #icons a:hover {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: bio;
+}
+
+#about-section .jobs {
+  background: #515151;
+  padding: .5rem;
+  border-bottom: #eece1a 5px solid;
 }
 
 #about-section #job1 {
