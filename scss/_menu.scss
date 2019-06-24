@@ -11,7 +11,7 @@
       width: 28px;
       height: 3px;
       margin: 0 0 5px 0;
-      background: #fff;
+      background: set-text-color($primary-color);
       transition: all 1s ease;
    }
 
@@ -61,7 +61,7 @@
    }
 
    &-nav {
-      background: darken($color: #444, $amount: 5);
+      background: darken($color: $primary-color, $amount: 5);
       margin: 0;
       padding: 0;
       list-style: none;
@@ -75,7 +75,7 @@
    }
 
    &-portrait {
-      background: #444;
+      background: $primary-color;
       transform: translate3d(0, 100%, 0);
       transition: all 1s ease;
 
@@ -106,7 +106,7 @@
       }
 
       &.current > a {
-         color: orange;
+         color: $secondary-color;
       }
    }
 
@@ -117,7 +117,7 @@
       text-transform: uppercase;
       padding: 1rem 0;
       font-weight: 300;
-      color: #fff;
+      color: set-text-color($primary-color);
       text-decoration: none;
       transition: all 1s ease;
 
