@@ -2,12 +2,12 @@
 @import 'config';
 @import 'menu';
 
-
-//*   GLOBALS
+//*   GLOBAL SECTION
 * {
    box-sizing: border-box;
 }
 
+//    BODY
 body {
    @include background;
    background: $primary-color;
@@ -129,6 +129,14 @@ main {
    }
 }
 
+//*   FOOTER SECTION
+footer {
+   background: darken($primary-color, 10);
+   color: set-text-color($primary-color);
+   text-align: center;
+   height: 50px;
+   padding: 1rem;
+}
 
 //! import mobile file last
 @import 'mobile';

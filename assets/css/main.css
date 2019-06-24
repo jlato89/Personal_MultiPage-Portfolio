@@ -317,6 +317,14 @@ main #icons a:hover {
   grid-area: job3;
 }
 
+footer {
+  background: #2b2b2b;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+  padding: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   main {
     -webkit-box-align: center;
