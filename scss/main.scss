@@ -129,7 +129,7 @@ main {
    }
 }
 
-//*   PROJECT SECTION
+//*   MY WORK SECTION
 #project-section {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -140,15 +140,17 @@ main {
    }
 
    .overlay-text {
-      background: #685858;
+      background: #444;
       position: absolute;
-      color: yellow;
+      font-family: sans-serif;
+      color: white;
       text-align: center;
       width: 98%;
-      bottom: 50%;
+      bottom: 40%;
       left: 2px;
       opacity: 0.7;
-      padding: 0.4rem 0;
+      padding: 0.5rem 0;
+      z-index: 2;
    }
 
    img {
@@ -184,6 +186,9 @@ main {
       }
    }
 }
+
+//* CONTACT ME SECTION
+
 
 //*   FOOTER SECTION
 footer {
