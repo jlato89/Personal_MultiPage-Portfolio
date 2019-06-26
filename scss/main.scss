@@ -23,13 +23,14 @@ h1,
 h2,
 h3 {
    margin: 0;
-   font-weight: 400;
+   font-weight: 300;
 
    &.lg-heading {
-      font-size: 6rem;
+      font-size: 5rem;
    }
    &.sm-heading {
       background: rgba(lighten($primary-color, 2), 0.5);
+      font-size: 1.3em;
       width: fit-content;
       padding: 0.2rem 1rem;
       margin-bottom: 2rem;
@@ -63,7 +64,7 @@ header {
 //*   MAIN PAGE CONTENT
 main {
    min-height: calc(100vh - 50px); // Workaround for sticky footer
-   padding: 4rem;
+   padding: 2rem 4rem;
    
    &#home {
       overflow: hidden;
@@ -85,7 +86,6 @@ main {
          }
       }
    }
-   
 }
 
 //*   ABOUT ME SECTION
@@ -129,9 +129,50 @@ main {
    }
 }
 
+//*   PROJECT SECTION
+#project-section {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 0.6rem;
+
+   img {
+      width: 100%;
+      height: 25vh;
+      border: 3px solid #fff;
+
+      &:hover {
+         opacity: 0.5;
+         border: 3px solid $secondary-color;
+         @include easeOut;
+      }
+   }
+
+   .btn {
+      display: block;
+      text-align: center;
+      padding: 0.3rem 1rem;
+      margin-bottom: 0.3rem;
+
+      &.btn-dark {
+         background: darken($primary-color, 50);
+         color: #fff;
+      }
+      &.btn-light {
+         background: lighten($primary-color, 50);
+         color: #333;
+      }
+
+      &:hover {
+         background: $secondary-color;
+         color: set-text-color($secondary-color);
+      }
+   }
+}
+
 //*   FOOTER SECTION
 footer {
    background: darken($primary-color, 10);
+   font-family: sans-serif;
    color: set-text-color($primary-color);
    text-align: center;
    height: 50px;

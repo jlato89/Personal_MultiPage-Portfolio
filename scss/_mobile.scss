@@ -1,11 +1,15 @@
 // Widescreens
 @include mediaXl {
-
+   #project-section {
+      grid-template-columns: repeat(4, 1fr);
+   }
 }
 
 // Desktops & Laptops
 @include mediaLg {
-   
+   #project-section {
+      grid-template-columns: repeat(3, 1fr);
+   }   
 }
 
 // Tablets & Netbooks
@@ -45,9 +49,15 @@
          height: 150px;
       }
    }
+
+   #project-section {
+      grid-template-columns: repeat(2, 1fr);
+   }
 }
 
 // Phones
 @include mediaSm {
-
+   #project-section {
+      grid-template-columns: 1fr;
+   }
 }
