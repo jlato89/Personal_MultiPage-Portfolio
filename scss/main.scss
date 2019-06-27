@@ -193,11 +193,32 @@ main {
       margin: 0.5rem 1.5rem;
    }
 
+   //    Contact Form
    .form {
       background: lighten($primary-color, 15);
-      width: 80%;
-      height: 40vh;
+      width: 480px;
+      height: fit-content;
+      padding: 1.5rem;
+      padding-top: .5rem;
       margin: 1rem 0;
+
+      h1 {
+         text-align: center;
+         margin-bottom: 10px;
+      }
+      #form-name,
+      #form-email,
+      #form-phone,
+      #form-company {
+         width: 100%;
+         margin-bottom: 10px;
+      }
+               
+      #form-message {
+         width: 100%;
+         height: 20vh;
+         margin-bottom: 5px;
+      }
    }
 }
 
@@ -220,13 +241,18 @@ footer {
 
          a:hover {
             color: set-text-color($secondary-color);
-            @include easeOut;
          }
       }
    }
 
    .copyright {
+      font-size: 0.8rem;
       margin: auto 1rem
+   }
+
+   //    Footer Fix
+   ul {
+   margin-block-end: 0;
    }
 }
 

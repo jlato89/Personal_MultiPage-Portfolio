@@ -400,9 +400,32 @@ main #icons a:hover {
 
 #contact-section .form {
   background: #6a6a6a;
-  width: 80%;
-  height: 40vh;
+  width: 480px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1.5rem;
+  padding-top: .5rem;
   margin: 1rem 0;
+}
+
+#contact-section .form h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#contact-section .form #form-name,
+#contact-section .form #form-email,
+#contact-section .form #form-phone,
+#contact-section .form #form-company {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#contact-section .form #form-message {
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 5px;
 }
 
 footer {
@@ -432,12 +455,16 @@ footer .navbar li {
 
 footer .navbar li a:hover {
   color: #000;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
 }
 
 footer .copyright {
+  font-size: 0.8rem;
   margin: auto 1rem;
+}
+
+footer ul {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 @media screen and (min-width: 1171px) {
