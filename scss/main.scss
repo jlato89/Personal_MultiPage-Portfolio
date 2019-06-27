@@ -116,17 +116,9 @@ main {
       border-bottom: $secondary-color 5px solid;
    }
 
-   #job1 {
-      grid-area: job1;
-   }
-
-   #job2 {
-      grid-area: job2;
-   }
-
-   #job3 {
-      grid-area: job3;
-   }
+   #job1 {grid-area: job1;}
+   #job2 {grid-area: job2;}
+   #job3 {grid-area: job3;}
 }
 
 //*   MY WORK SECTION
