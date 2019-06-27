@@ -401,8 +401,27 @@ main #icons a:hover {
 #contact-section .form {
   background: #6a6a6a;
   width: 80%;
-  height: 40vh;
+  max-width: 720px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1.5rem;
   margin: 1rem 0;
+}
+
+#contact-section .form .name, #contact-section .form .email {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#contact-section .form .email {
+  float: right;
+}
+
+#contact-section .form #form-message {
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 5px;
 }
 
 footer {
@@ -437,6 +456,7 @@ footer .navbar li a:hover {
 }
 
 footer .copyright {
+  font-size: 0.8rem;
   margin: auto 1rem;
 }
 

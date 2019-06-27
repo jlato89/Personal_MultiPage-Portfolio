@@ -194,10 +194,31 @@ main {
    }
 
    .form {
+   }
+
+   //    Contact Form
+   .form {
       background: lighten($primary-color, 15);
       width: 80%;
-      height: 40vh;
+      max-width: 720px;
+      height: fit-content;
+      padding: 1.5rem;
       margin: 1rem 0;
+
+      .name, .email {
+         display: inline-block;
+         margin-bottom: 5px;
+      }
+
+      .email {
+         float: right;
+      }
+               
+      #form-message {
+         width: 100%;
+         height: 20vh;
+         margin-bottom: 5px;
+      }
    }
 }
 
@@ -226,6 +247,7 @@ footer {
    }
 
    .copyright {
+      font-size: 0.8rem;
       margin: auto 1rem
    }
 }
