@@ -400,22 +400,26 @@ main #icons a:hover {
 
 #contact-section .form {
   background: #6a6a6a;
-  width: 80%;
-  max-width: 720px;
+  width: 480px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 1.5rem;
+  padding-top: .5rem;
   margin: 1rem 0;
 }
 
-#contact-section .form .name, #contact-section .form .email {
-  display: inline-block;
-  margin-bottom: 5px;
+#contact-section .form h1 {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-#contact-section .form .email {
-  float: right;
+#contact-section .form #form-name,
+#contact-section .form #form-email,
+#contact-section .form #form-phone,
+#contact-section .form #form-company {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 #contact-section .form #form-message {

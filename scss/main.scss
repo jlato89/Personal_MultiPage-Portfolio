@@ -196,19 +196,22 @@ main {
    //    Contact Form
    .form {
       background: lighten($primary-color, 15);
-      width: 80%;
-      max-width: 720px;
+      width: 480px;
       height: fit-content;
       padding: 1.5rem;
+      padding-top: .5rem;
       margin: 1rem 0;
 
-      .name, .email {
-         display: inline-block;
-         margin-bottom: 5px;
+      h1 {
+         text-align: center;
+         margin-bottom: 10px;
       }
-
-      .email {
-         float: right;
+      #form-name,
+      #form-email,
+      #form-phone,
+      #form-company {
+         width: 100%;
+         margin-bottom: 10px;
       }
                
       #form-message {
