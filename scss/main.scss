@@ -185,11 +185,30 @@ main {
 //*   FOOTER SECTION
 footer {
    background: darken($primary-color, 10);
+   display: flex;
+   justify-content: space-between;
    font-family: sans-serif;
    color: set-text-color($primary-color);
-   text-align: center;
    height: 50px;
-   padding: 1rem;
+
+   .navbar {
+      display: flex;
+      list-style: none;
+      padding: 0 1rem;
+
+      li {
+         margin: auto 0.5rem;
+
+         a:hover {
+            color: set-text-color($secondary-color);
+            @include easeOut;
+         }
+      }
+   }
+
+   .copyright {
+      margin: auto 1rem
+   }
 }
 
 //! import mobile file last
