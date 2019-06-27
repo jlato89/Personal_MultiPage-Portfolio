@@ -62,7 +62,21 @@
             <span class="text-secondary">(207) 240-8405</span>
          </div>
          <div class="form">
-            This is where the eventual CONTACT form will go.
+            <form action="assets/javascript/contact.js" method="post">
+               <div class="name">
+                  <h3>Name:</h3>
+                  <input type="text" name="name" id="form-name">
+               </div>
+               <div class="email">
+                  <h3>E-mail:</h3>
+                  <input type="email" name="email" id="form-email">
+               </div>
+               <div class="message">
+                  <h3>Message:</h3>
+                  <textarea name="message" id="form-message"></textarea>
+               </div>
+               <input type="submit" value="Send Email" id="form-submit">
+            </form>
          </div>
       </div>
    </main>
