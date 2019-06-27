@@ -241,7 +241,6 @@ footer {
 
          a:hover {
             color: set-text-color($secondary-color);
-            @include easeOut;
          }
       }
    }
