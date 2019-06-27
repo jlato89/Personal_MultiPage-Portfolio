@@ -458,6 +458,11 @@ footer .copyright {
   margin: auto 1rem;
 }
 
+footer ul {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
 @media screen and (min-width: 1171px) {
   #project-section {
     -ms-grid-columns: (1fr)[4];
