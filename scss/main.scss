@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import 'config';
+@import 'menu';
+
+//*   GLOBAL SECTION
+* {
+   box-sizing: border-box;
+}
+
+//    BODY
+body {
+   @include background;
+   background: $primary-color;
+   color: set-text-color($primary-color);
+   height: 100%;
+   margin: 0;
+   font-family: 'Bree Serif', serif;
+   line-height: 1.5;
+}
+
+//   Headings
+h1,
+h2,
+h3 {
+   margin: 0;
+   font-weight: 300;
+
+   &.lg-heading {
+      font-size: 5rem;
+   }
+   &.sm-heading {
+      background: rgba(lighten($primary-color, 2), 0.5);
+      font-size: 1.3em;
+      width: fit-content;
+      padding: 0.2rem 1rem;
+      margin-bottom: 2rem;
+   }
+}
+
+//   BACKGROUND & OVERLAY
+#bg-img {
+   background: url($home-image); // ref: https://theholyroast.com/wp-content/uploads/2016/11/coffee-laptop-background.jpg
+   background-color: #d2d2d2;
+}
+
+//   LINKS
+a {
+   color: #fff;
+   text-decoration: none;
+}
+
+//   MENU LINKS
+header {
+   position: fixed;
+   top: 0;
+   z-index: 2;
+   width: 100%;
+}
+
+.text-secondary {
+   color: $secondary-color;
+}
+
+//*   MAIN PAGE CONTENT
+main {
+   min-height: calc(100vh - 50px); // Workaround for sticky footer
+   padding: 2rem 4rem;
+   
+   &#home {
+      overflow: hidden;
+      h1 {
+         margin-top: 20vh;
+      }
+   }
+   
+   //   SOCIAL ICONS
+   #icons {
+      margin-top: 1rem;
+
+      a {
+         padding: 0.4rem;
+         @include easeOut;
+
+         &:hover {
+            color: $secondary-color;
+         }
+      }
+   }
+}
+
+//*   ABOUT ME SECTION
+#about-section {
+   display: grid;
+   grid-gap: 30px;
+   grid-template-areas:
+      'bio-img bio bio'
+      'job1 job2 job3';
+   grid-template-columns: repeat(3, 1fr);
+   
+   #bio-img {
+      grid-area: bio-img;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 6px solid $secondary-color;
+      margin: auto;
+   }
+
+   #bio {
+      grid-area: bio;
+   }
+
+   .jobs {
+      background: lighten($primary-color, 5);
+      padding: .5rem;
+      border-bottom: $secondary-color 5px solid;
+   }
+
+   #job1 {
+      grid-area: job1;
+   }
+
+   #job2 {
+      grid-area: job2;
+   }
+
+   #job3 {
+      grid-area: job3;
+   }
+}
+
+//*   MY WORK SECTION
+#project-section {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 0.6rem;
+
+   .item {
+   position: relative;
+   }
+
+   .overlay-text {
+      background: #444;
+      position: absolute;
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+      width: 98%;
+      bottom: 40%;
+      left: 2px;
+      opacity: 0.7;
+      padding: 0.5rem 0;
+      z-index: 2;
+   }
+
+   img {
+      width: 100%;
+      height: 25vh;
+      border: 3px solid #fff;
+
+      &:hover {
+         opacity: 0.5;
+         border: 3px solid $secondary-color;
+         @include easeOut;
+      }
+   }
+
+   .btn {
+      display: block;
+      text-align: center;
+      padding: 0.3rem 1rem;
+      margin-bottom: 0.3rem;
+
+      &.btn-dark {
+         background: darken($primary-color, 50);
+         color: #fff;
+      }
+      &.btn-light {
+         background: lighten($primary-color, 50);
+         color: #333;
+      }
+
+      &:hover {
+         background: $secondary-color;
+         color: set-text-color($secondary-color);
+      }
+   }
+}
+
+//* CONTACT ME SECTION
+
+
+//*   FOOTER SECTION
+footer {
+   background: darken($primary-color, 10);
+   font-family: sans-serif;
+   color: set-text-color($primary-color);
+   text-align: center;
+   height: 50px;
+   padding: 1rem;
+}
+
+//! import mobile file last
+@import 'mobile';
