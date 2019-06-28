@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/joshycqi/public_html/
-    - /home/joshycqi/repositories/jlatour-portfolio -R dist $DEPLOYPATH
+    - /bin/cp -R dist $DEPLOYPATH
