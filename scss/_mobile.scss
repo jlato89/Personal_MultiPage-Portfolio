@@ -1,29 +1,34 @@
-// Widescreens
+//* Widescreens
 @include mediaXl {
+   // Work section
    #project-section {
       grid-template-columns: repeat(4, 1fr);
    }
 }
 
-// Desktops & Laptops
+//* Desktops & Laptops
 @include mediaLg {
+   // Work section
    #project-section {
       grid-template-columns: repeat(3, 1fr);
    }   
 }
 
-// Tablets & Netbooks
+//* Tablets & Netbooks
 @include mediaMd {
+   // Global section
    main {
       align-items: center;
       text-align: center;
 
       .lg-heading {
          line-height: 1;
-         margin: 0 -4rem;
+         // margin: 0 -4rem; //! pushes content to left
          margin-bottom: 1rem;
       }
    }
+
+   // Header section
    ul#menu-nav,div#menu-portrait {
       float: none;
       width: 100%;
@@ -50,14 +55,53 @@
       }
    }
 
+   // Work section
    #project-section {
       grid-template-columns: repeat(2, 1fr);
    }
 }
 
-// Phones
+//* Phones
 @include mediaSm {
+   // Global section
+   html {
+      font-size: 12px;
+   }
+   main {
+      padding: 1rem 2rem;
+   }
+
+   // Header section
+   #menu-btn {
+   right: 10px;
+   top: 10px;
+   }
+
+   // Work section
    #project-section {
       grid-template-columns: 1fr;
+   }
+   
+   // About section
+   #about-section {
+      grid-template-areas:
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+      grid-template-columns: 1fr;
+
+      #bio-img {
+      display: none;
+      }
+   }
+
+   // Contact section
+   #contact .lg-heading {
+      font-size: 4rem;
+   }
+
+   #contact-section .box {
+      font-size: 1.2rem;
    }
 }
