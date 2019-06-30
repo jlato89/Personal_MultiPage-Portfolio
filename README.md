@@ -1,4 +1,3 @@
 # jlatour-portfolio
-*WIP* My professional portfolio
 
-this is a test
+## This is my live portfolio repository
